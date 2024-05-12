@@ -1,0 +1,51 @@
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url('fondo.jpg'); /* Ruta a la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+}
+.gallery {
+    position: relative;
+    height: 600px; /* Altura fija para la galería */
+    overflow: hidden; /* Ocultar las imágenes que se desbordan */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente los elementos */
+    align-items: center; /* Centrar verticalmente los elementos */
+}
+
+.gallery img {
+    width: 100%; /* Utilizar width en lugar de max-width */
+    height: 200px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    transform: translateY(-50%); /* Desplazar hacia arriba un 50% de la altura */
+}
+
+.content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    width: calc(100% - 40px); /* Ancho del contenido para ajustarlo al contenedor */
+    padding: 20px; /* Añade un relleno para separar el contenido del borde */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad del texto */
+    border-radius: 0 0 10px 10px; /* Ajusta el radio del borde inferior para que coincida con el de la imagen */
+}
+
+.content h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.content p {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
